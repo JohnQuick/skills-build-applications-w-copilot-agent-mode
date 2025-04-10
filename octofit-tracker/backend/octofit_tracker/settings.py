@@ -25,7 +25,10 @@ SECRET_KEY = "django-insecure-$g2(lejwuri1@7r+g&kmz5s7kqjfe#1gi#h9n+1lh(+0*u^oni
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'miniature-space-capybara-rxx69gw456cw59p-8000.app.github.dev']
+
+# Add a setting for the codespace URL
+CODESPACE_URL = 'https://miniature-space-capybara-rxx69gw456cw59p-8000.app.github.dev'
 
 
 # Application definition

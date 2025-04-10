@@ -1,12 +1,13 @@
 from rest_framework import viewsets, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from django.conf import settings
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 from .models import User, Team, Activity, Leaderboard, Workout
 
 @api_view(['GET'])
 def api_root(request, format=None):
-    base_url = request.build_absolute_uri('/').rstrip('/')
+    base_url = settings.CODESPACE_URL or request.build_absolute_uri('/').rstrip('/')
     return Response({
         'users': f"{base_url}/api/users/",
         'teams': f"{base_url}/api/teams/",
