@@ -13,22 +13,26 @@ function Workouts() {
   return (
     <div className="container mt-4">
       <h1 className="text-primary">Workouts</h1>
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          {workouts.map(workout => (
-            <tr key={workout.id}>
-              <td>{workout.id}</td>
-              <td>{workout.name}</td>
+      <div className="table-responsive">
+        <table className="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Workout Name</th>
+              <th>Description</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {workouts.map(workout => (
+              <tr key={workout._id}>
+                <td>{workout._id}</td>
+                <td>{workout.name}</td>
+                <td>{workout.description}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

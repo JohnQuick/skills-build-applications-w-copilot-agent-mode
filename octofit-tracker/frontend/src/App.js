@@ -6,6 +6,7 @@ import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
 import './App.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (
@@ -20,19 +21,19 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" to="/activities">Activities</Link>
-              </li>
-              <li className="nav-item">
                 <Link className="nav-link" to="/leaderboard">Leaderboard</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/teams">Teams</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/users">Users</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/teams">Teams</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/workouts">Workouts</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/activities">Activities</Link>
               </li>
             </ul>
           </div>
@@ -40,11 +41,11 @@ function App() {
       </nav>
       <div className="mt-4">
         <Routes>
-          <Route path="/activities" element={<Activities />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
-          <Route path="/teams" element={<Teams />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/teams" element={<Teams />} />
           <Route path="/workouts" element={<Workouts />} />
+          <Route path="/activities" element={<Activities />} />
           <Route path="/" element={<h1>Welcome to OctoFit Tracker</h1>} />
         </Routes>
       </div>

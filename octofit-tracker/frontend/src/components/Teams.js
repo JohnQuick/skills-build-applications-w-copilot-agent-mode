@@ -13,22 +13,36 @@ function Teams() {
   return (
     <div className="container mt-4">
       <h1 className="text-primary">Teams</h1>
-      <table className="table table-hover">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          {teams.map(team => (
-            <tr key={team.id}>
-              <td>{team.id}</td>
-              <td>{team.name}</td>
+      <div className="table-responsive">
+        <table className="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Team ID</th>
+              <th>Team Name</th>
+              <th>Members</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {teams.map(team => (
+              <tr key={team._id}>
+                <td>{team._id}</td>
+                <td>{team.name}</td>
+                <td>
+                  <ul>
+                    {team.members.map(member => (
+                      <li key={member._id}>
+                        <a href={`mailto:${member.email}`} className="text-decoration-none text-primary">
+                          {member.username}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

@@ -13,22 +13,30 @@ function Activities() {
   return (
     <div className="container mt-4">
       <h1 className="text-primary">Activities</h1>
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          {activities.map(activity => (
-            <tr key={activity.id}>
-              <td>{activity.id}</td>
-              <td>{activity.name}</td>
+      <div className="table-responsive">
+        <table className="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Activity Type</th>
+              <th>Duration</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {activities.map(activity => (
+              <tr key={activity._id}>
+                <td>
+                  <a href={`mailto:${activity.user.email}`} className="text-decoration-none text-primary">
+                    {activity.user.username}
+                  </a>
+                </td>
+                <td>{activity.activity_type}</td>
+                <td>{activity.duration}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
