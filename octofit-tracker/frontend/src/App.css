@@ -1,0 +1,89 @@
+body {
+  background-color: #f0f8ff; /* Light blue background */
+  color: #333; /* Darker text for readability */
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 60px;
+  margin-right: 10px;
+  float: left;
+  animation: none; /* Disable animations */
+}
+
+.App-header {
+  background-color: #4682b4; /* Steel blue */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #ff4500; /* Orange links */
+  text-decoration: none;
+}
+
+.App-link:hover {
+  color: #ffa500; /* Lighter orange on hover */
+}
+
+nav {
+  background-color: #2b2d42; /* Dark navy */
+  color: white;
+}
+
+nav a {
+  color: #8ecae6; /* Light blue links */
+}
+
+nav a:hover {
+  color: #219ebc; /* Darker blue on hover */
+}
+
+table {
+  background-color: #ffffff; /* White table background */
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #4682b4; /* Steel blue */
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f0f8ff; /* Light blue */
+}
+
+button {
+  background-color: #4682b4; /* Steel blue */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5a9bd4; /* Lighter steel blue */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2b2d42; /* Dark navy headings */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
