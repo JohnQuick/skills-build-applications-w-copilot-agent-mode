@@ -7,7 +7,7 @@ from .models import User, Team, Activity, Leaderboard, Workout
 
 @api_view(['GET'])
 def api_root(request, format=None):
-    base_url = settings.CODESPACE_URL or request.build_absolute_uri('/').rstrip('/')
+    base_url = 'https://miniature-space-capybara-rxx69gw456cw59p-8000.app.github.dev'
     return Response({
         'users': f"{base_url}/api/users/",
         'teams': f"{base_url}/api/teams/",
